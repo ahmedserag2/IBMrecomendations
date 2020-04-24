@@ -1,6 +1,7 @@
 import json
 import plotly
 import pandas as pd
+from RecomendationCollaborative import Collaborative
 
 import os.path
 
