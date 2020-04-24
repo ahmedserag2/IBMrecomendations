@@ -121,7 +121,7 @@ class Collaborative(recomender):
         neighbours_df = pd.concat([neighbours_df, interactions_df], join="inner",axis = 1).reset_index()
         neighbours_df.rename(columns = {'index' : 'neighbour_id'},inplace = True)
         neighbours_df.sort_values(["similarity", "number_of_interactions"], ascending = (False, False) ,inplace = True)
-        
+        #neighbours_df.drop_duplicates(article_ids)
         return neighbours_df # Return the dataframe specified in the doc_string
 
 
@@ -160,7 +160,7 @@ class Collaborative(recomender):
         while(i < m):
             neighbour_articles_ids,neighbour_articles_titles = self.get_user_articles(similar_user_ids[j])
             common_articles = np.intersect1d(user_articles_ids , neighbour_articles_ids)
-            df.loc[df['article_id'].isin(common_articles)].article_id.value_counts().index
+            df.drop_duplicates(subset = 'article_id').loc[df.drop_duplicates()['article_id'].isin(common_articles)].article_id.value_counts().index
             for article in common_articles:
                 recs.append(article)  
                 i += 1

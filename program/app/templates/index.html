@@ -25,7 +25,7 @@
       
         <div class="row">
             <div class="col-lg-12 form-group-lg">
-                <form action="/go" method="get">
+                <form action="/recomendations" method="get">
                     <input type="text" class="form-control form-control-lg" name="query" placeholder="enter userID to view reccomendation" autocomplete="off">
                     <div class="col-lg-offset-5">
                         <button type="submit" class="btn btn-lg btn-dark">Recomend</button>
@@ -34,6 +34,8 @@
             </div>
         </div>
     <div class = "containter">
+                {% block message %}
+
         <div class = "row">
             <div class = "col-4">
         <ul class="list-group">
@@ -45,14 +47,20 @@
         </ul>
     </div>
 
+            {% endblock %}
+
+        {% block content %}
+
      <div class = "col-5">
         <ul class="list-group">
-            <li class="list-group-item active">Top Rated</li>
-            {% for n in data %}
+            <li class="list-group-item active">Things the user might like</li>
+            {% for n in userMatch %}
           <li class="list-group-item">{{n}}</li>
                  {% endfor %}
           
         </ul>
+            {% endblock %}
+
     </div>
 
 
@@ -64,24 +72,12 @@
 
 
 
-        {% block message %}
-        {% endblock %}
     </div>
 </div>
 
 
 
-<div class="container">
-    {% block content %}
-        <div class="page-header">
-            <h1 class="text-center">Overview of Training Dataset</h1>
-        </div>
-    {% endblock %}
 
-    {% for id in ids %}
-        <div id="{{id}}"></div>
-    {% endfor %}
-</div>
 
 </body>
 </html>
