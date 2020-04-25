@@ -28,11 +28,11 @@ IBM for providing the datasets and making this project possible
 2. Go to http://0.0.0.0:3001/
 
 ### room for Improvments:
-	- i would start by modularizing the code some more by putting the user_id in the collaborative filtering class itself
+- i would start by modularizing the code some more by putting the user_id in the collaborative filtering class itself
 		this way each colaborativerec object would have its own user_id and its own recomendations and wont be just some
 		object i could call just to get the recomendations
-	- an ETL aproach were i can run python scripts to wrangle my data instead of mapping the each user email to user_id in the 
+- an ETL aproach were i can run python scripts to wrangle my data instead of mapping the each user email to user_id in the 
 		run.py file
 
-	- for the users that dont have much reccomendations because they didnt read much articles in the first place content based filtering would be needed
+- for the users that dont have much reccomendations because they didnt read much articles in the first place content based filtering would be needed
 
