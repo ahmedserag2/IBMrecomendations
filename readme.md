@@ -1,24 +1,31 @@
 # Disaster Response Pipeline Project
 
 ### Project Motivation:
-This project is aimed to visualize and classify disaster messages from the DisasterResponse data sets.
+This is a recomendation engine aimed to provide articles for the users to read on the IBM watson platform.
+
+### Acknowledgments
+Udacity for making such a complete nanodegree
+IBM for providing the datasets and making this project possible
 
 ### project phases:
-In this project there were 3 phases:
-1. build an ETL pipeline to load,clean and save data from the database
-2. buid a ML pipeline to deploy a clasification model
-3. the flask app which uses the ML model to classify messages and runs visualizations on the data set
+In this project there were 2 phases:
+1. taking a functional aproach aimed to analyze the data and quickly provide recomendations in jupyter notebooks
+2. an OOP aproach aimed to implement all my recomendations into the flask app
+
+
+### directories
+There are two main directories in this project
+1. the program (contains the flask application,templates and the datasets)
+2. the notebook and tests(this is whats basically provided in the udacity workspace)
+
 
 ### libraries and frameworks used
 - pandas
 - sklearn
 - numpy
-- plotly
 - flask(framework)
 
-### Acknowledgments
-Udacity for making such a complete nanodegree
-IBM for providing the datasets and making this project possible
+
 
 ### runnning:
 1. to run the flask app run the following command in the program/app directory.
@@ -26,6 +33,9 @@ IBM for providing the datasets and making this project possible
     - python run.py
 
 2. Go to http://0.0.0.0:3001/
+
+3. NOTE : the flask app is fully functional but the notebook might give you an error if you tried running it because
+	i am using an absolute file path for the csv files so just replace with your filepath 
 
 ### room for Improvments:
 - i would start by modularizing the code some more by putting the user_id in the collaborative filtering class itself
