@@ -18,6 +18,11 @@ There are two main directories in this project
 1. the program (contains the flask application,templates and the datasets)
 2. the notebook and tests(this is whats basically provided in the udacity workspace)
 
+### the recommendations methods used:
+1. rankbased approach returns the top rated articles
+2. collaborative filtering using SVD(not included in flask app)
+ and calculating coefficents using the dot product
+
 
 ### libraries and frameworks used
 - pandas
