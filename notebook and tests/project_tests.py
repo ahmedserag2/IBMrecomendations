@@ -2,8 +2,9 @@ import pandas as pd
 import numpy as np
 import pickle
 
-df = pd.read_csv('data/user-item-interactions.csv')
-df_content = pd.read_csv('data/articles_community.csv')
+df = pd.read_csv('C:\\Users\\ahmed\\OneDrive\\Desktop\\reccomendation Engine\\program\\data\\user-item-interactions.csv')
+df_content = pd.read_csv('C:\\Users\\ahmed\\OneDrive\\Desktop\\reccomendation Engine\\program\\data\\articles_community.csv')
+
 del df['Unnamed: 0']
 del df_content['Unnamed: 0']
 
